@@ -6,16 +6,27 @@ Postman
 Newman
 
 # Prerequisite:
-Jdk
 Node Js
 Newman
 Html Report Library
 
-# Newman and Report Installation Process:
-Newman Install Command:
+# Newman Installation Process:
+Install Command:
+npm install -g newman
+
+Run Command: 
+newman run “Path/CollectionName.json” -e Path/EnvironmentName.json
+newman run “Collection Link” -e “Path”/EnvironmentName.json
+
+# Report Configure
+Install Command:
+npm install -g newman-reporter-html
 npm install -g newman-reporter-htmlextra
-Newman Html Report Install Command:
-npm install -g newman-reporter-htmlextra
+
+Run Command: 
+newman run CollectionName.json -e EnvironmentName.json -r cli,html
+newman run CollectionName.json -e EnvironmentName.json -r cli,htmlextra
+
 
 # API Documentation:
 https://restful-booker.herokuapp.com/apidoc/index.html
